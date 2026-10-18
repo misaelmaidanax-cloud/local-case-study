@@ -74,5 +74,5 @@ The tests are read-only: they open pages and check responses, and never create a
 Background in QA and AI operations: manual and automated testing (Cypress, Selenium, Playwright), no-code automation and integrations (n8n, Make, GoHighLevel, Zapier), technical support, and aircraft maintenance before that. I am looking for remote roles in QA, AI or product operations, technical support, or implementation.
 
 **[LinkedIn: Misael Alejandro Maidana](https://www.linkedin.com/in/misael-alejandro-maidana/)** · **Project: [localarg.com](https://localarg.com)**
-
+-- misael03maidana@gmail.com      //    +549 3516 188386
 <sub>Documentation shared for portfolio purposes. The Local brand and application belong to their authors.</sub>
