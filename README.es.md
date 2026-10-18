@@ -74,5 +74,6 @@ Las pruebas son de solo lectura: abren páginas y revisan respuestas, y nunca cr
 Experiencia en QA y operaciones de IA: pruebas manuales y automatizadas (Cypress, Selenium, Playwright), automatizaciones sin código e integraciones (n8n, Make, GoHighLevel, Zapier), soporte técnico y, antes, mantenimiento de aeronaves. Busco puestos remotos en QA, operaciones de IA o de producto, soporte técnico o implementación.
 
 **[LinkedIn: Misael Alejandro Maidana](https://www.linkedin.com/in/misael-alejandro-maidana/)** · **Proyecto: [localarg.com](https://localarg.com)**
+-- misael03maidana@gmail.com      //    +549 3516 188386
 
 <sub>Documentación compartida con fines de portfolio. La marca y la aplicación Local pertenecen a sus autores.</sub>
