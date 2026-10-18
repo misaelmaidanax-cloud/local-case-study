@@ -1,59 +1,53 @@
 # Test plan
 
-Living document for Local. Updated after every release and every incident.
+Updated after every release and every incident.
 
-## Scope
+**In scope:** search and map, shop page, cart and order, account, profile, merchant dashboard, admin area, email, app install, shared link previews, legal pages, domains.
+**Out of scope for now:** load testing, accessibility audit, payments (the app does not process payments).
 
-In scope: the public web app (search and map, shop page, cart and order, account, profile), the merchant dashboard, the admin area, transactional email, the PWA install experience, shared link previews, legal pages, and the domains (`localarg.com`, `www`, `catalogo`).
-
-Out of scope for now: load and performance testing, accessibility audit, payments (the app does not process payments).
-
-## Environments and devices
-
-| Environment | Use |
-|---|---|
-| Local development server | Fast checks while a change is being made |
-| Production (`localarg.com`) | Final verification after every release. Smoke tests are read-only |
+## Devices
 
 | Device | Browser | Why |
 |---|---|---|
-| Windows desktop | Chrome | Main desktop path, where the profile button and dialogs live |
-| Android phone | Chrome, installed app | Main user path: install, location, WhatsApp handoff |
-| iPhone | Safari | Install is manual; no install prompt |
-| Narrow desktop window (375 px) | Chrome | Quick mobile layout check |
+| Windows desktop | Chrome | Main desktop path |
+| Android phone | Chrome, installed app | Main user path: install, location, WhatsApp |
+| iPhone | Safari | Manual install, no install prompt |
+| 375 px wide window | Chrome | Quick mobile layout check |
 
-## Risk areas, in order
+Tests run against the live site (`localarg.com`) after every release. Automated checks are read-only.
 
-1. **Onboarding of a new merchant** (sign up, become a merchant, create a shop, see it on the map). Everything else depends on shops existing. Broken once by a migration (BUG-003).
+## Risk areas, most important first
+
+1. **Merchant onboarding** (sign up, become a merchant, create a shop, see it on the map). Broken once by a migration (BUG-003).
 2. **Ordering without an account** and the WhatsApp handoff.
-3. **Account:** sign up (terms must be accepted), log in, password reset by email, optional email verification.
-4. **Map and location:** pins by zoom level, location permission states, the vector map and its raster fallback.
+3. **Account:** sign up (terms required), log in, password reset, optional email verification.
+4. **Map and location:** pins by zoom, permission states, vector map and fallback.
 5. **Shared links and previews** (BUG-005).
-6. **Installability:** manifest, icons, install banner, installed-app behavior.
-7. **Releases and migrations:** schema changes that touch shared functions.
+6. **Install:** manifest, icons, install bar.
+7. **Migrations** that touch shared database functions.
 
 ## Smoke checklist before each release
 
-- [ ] Home loads, title is correct, the map container is present.
-- [ ] "Iniciar sesión" opens a centered dialog; closing it works.
-- [ ] "Crear cuenta" without ticking the terms shows an error and creates nothing.
-- [ ] `/terminos` and `/privacidad` open and show the owner's details.
-- [ ] A shop link (`/shop-name`) returns that shop's name in the preview metadata.
-- [ ] `manifest.webmanifest` is valid and each icon returns an image of the declared size.
-- [ ] `www.localarg.com` redirects to the apex domain; `catalogo.localarg.com` loads.
-- [ ] Manual, after any migration: sign up, become a merchant, create a shop, place an order, open the order link.
-- [ ] Manual, on a phone: install banner appears, location prompt, share a shop link in WhatsApp.
+- [ ] Home loads, correct title, map container present.
+- [ ] "Iniciar sesión" opens a centered dialog.
+- [ ] "Crear cuenta" without accepting the terms shows an error and creates nothing.
+- [ ] `/terminos` and `/privacidad` open.
+- [ ] A shop link returns that shop's name in its preview data.
+- [ ] The manifest is valid and each icon has the declared size.
+- [ ] `www` redirects to the main domain; the catalog site loads.
+- [ ] By hand, after any migration: sign up, become a merchant, create a shop, place an order.
+- [ ] By hand, on a phone: install bar, location prompt, share a shop link in WhatsApp.
 
-The automated part of this list is in [../tests](../tests).
+The automated part is in [../tests](../tests).
 
-## Known browser limitations (not defects)
+## Known browser limits (not defects)
 
-- Once location is blocked for a site, the site cannot ask again. The user must unblock it from the address bar (BUG-006).
-- Installed web apps keep their old icon until reinstalled (BUG-007).
-- iPhone has no install prompt; only instructions can be shown.
-- Link-preview crawlers do not execute JavaScript (BUG-005).
+- A blocked location permission cannot be asked again (BUG-006).
+- Installed apps keep the old icon until reinstalled (BUG-007).
+- iPhone shows no install prompt.
+- Link-preview crawlers do not run JavaScript (BUG-005).
 - Background tabs pause rendering and timers (BUG-010).
 
-## Defect handling
+## When a defect is found
 
-Each report follows the template in [bug-reports.md](bug-reports.md). The fix is verified on the live site, a regression test is added when the failure can be automated, and the checklist above is updated when the cause points to a gap in the process.
+File it in [bug-reports.md](bug-reports.md), verify the fix on the live site, add a regression test when it can be automated, and update this checklist if the cause was a process gap.
