@@ -10,9 +10,9 @@ Este repositorio **no tiene el código de la aplicación**. Tiene el trabajo que
 
 ## Mi rol
 
-Soy el dueño del producto, y además su tester y operador.
+Soy el encargado del producto, y además su tester y operador.
 
-- **Dueño del producto:** decido qué se construye, en qué orden y cuándo se publica.
+- **Encargado del producto:** decido qué se construye, en qué orden y cuándo se publica.
 - **QA:** pruebas manuales y exploratorias en computadora y celular, reportes de fallas y verificación de cada arreglo en el sitio real.
 - **Operación:** dominio, correo, copias de seguridad, publicaciones, seguridad de las cuentas y un tablero de tareas.
 - **Desarrollo:** el código lo escriben asistentes de programación con IA (Claude Code) bajo mi dirección. No lo presento como escrito a mano. Lo que aporto es la dirección del producto, las pruebas, la revisión de cada cambio y la disciplina de operación ([cómo trabajo con IA](docs/es/ai-assisted-workflow.md)).
@@ -75,4 +75,4 @@ Experiencia en QA y operaciones de IA: pruebas manuales y automatizadas (Cypress
 
 **[LinkedIn: Misael Alejandro Maidana](https://www.linkedin.com/in/misael-alejandro-maidana/)** · **Proyecto: [localarg.com](https://localarg.com)**
 
-<sub>Documentación compartida con fines de portfolio. La marca y la aplicación Local pertenecen a su dueño.</sub>
+<sub>Documentación compartida con fines de portfolio. La marca y la aplicación Local pertenecen a sus autores.</sub>

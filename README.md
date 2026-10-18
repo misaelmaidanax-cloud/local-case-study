@@ -10,9 +10,9 @@ This repository has **no application code**. It has the work around it: test pla
 
 ## My role
 
-I own the product, and I am its tester and operator.
+I am the person in charge of the product, and also its tester and operator.
 
-- **Product owner:** I decide what gets built, in what order, and when it ships.
+- **In charge of the product:** I decide what gets built, in what order, and when it ships.
 - **QA:** manual and exploratory testing on desktop and phone, bug reports, and verification of every fix on the live site.
 - **Operations:** domain, email, backups, releases, account security and a task tracker.
 - **Development:** the code is written by AI coding assistants (Claude Code) under my direction. I do not present it as hand-written. I contribute the product direction, the testing, the review of every change and the operational discipline ([how I work with AI](docs/ai-assisted-workflow.md)).
@@ -75,4 +75,4 @@ Background in QA and AI operations: manual and automated testing (Cypress, Selen
 
 **[LinkedIn: Misael Alejandro Maidana](https://www.linkedin.com/in/misael-alejandro-maidana/)** · **Project: [localarg.com](https://localarg.com)**
 
-<sub>Documentation shared for portfolio purposes. The Local brand and application belong to their owner.</sub>
+<sub>Documentation shared for portfolio purposes. The Local brand and application belong to their authors.</sub>

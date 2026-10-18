@@ -16,7 +16,7 @@ La primera tabla es evidencia de este proyecto. La segunda es la experiencia de 
 | Integraciones | Dominio, DNS y un proveedor de correo conectado al servicio de cuentas |
 | Seguridad de las cuentas | Verificación en dos pasos, códigos de recuperación, reglas de roles en la base |
 | Redacción técnica | Procedimientos, registro de decisiones, plan de pruebas y documentación en dos idiomas |
-| Dirección de producto | Prioridades, planes antes de los cambios grandes, tablero con responsables y fechas |
+| Gestión de producto | Prioridades, planes antes de los cambios grandes, tablero con responsables y fechas |
 | Trabajo con herramientas de IA | Un proceso escrito para dirigir y revisar código escrito por IA ([ai-assisted-workflow.md](ai-assisted-workflow.md)) |
 
 ## Experiencia de mi CV

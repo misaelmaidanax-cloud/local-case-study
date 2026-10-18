@@ -16,7 +16,7 @@ The first table is evidence from this project. The second is background from my 
 | Integrations | Domain, DNS and an email provider connected to the auth service |
 | Security hygiene | Two-step verification, recovery codes, role rules in the database |
 | Technical writing | Procedures, decision records, test plan, documentation in two languages |
-| Product ownership | Priorities, plans before big changes, a tracker with owners and dates |
+| Product management | Priorities, plans before big changes, a tracker with owners and dates |
 | Working with AI tools | A written process for directing and reviewing AI-written code ([ai-assisted-workflow.md](ai-assisted-workflow.md)) |
 
 ## Background from my CV
