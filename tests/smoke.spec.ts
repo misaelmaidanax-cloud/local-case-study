@@ -80,3 +80,27 @@ test("el sitio del catálogo responde", async ({ request, baseURL }) => {
   const res = await request.get("https://catalogo.localarg.com/");
   expect(res.status()).toBe(200);
 });
+
+// Página de inicio (/inicio): título, llamadas a acción hacia el mapa y contactos.
+test("la página de inicio carga con su título y lleva al mapa", async ({ page }) => {
+  await page.goto("/inicio");
+  await expect(page).toHaveTitle(/Lo que necesitás, cerca tuyo/);
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("Lo que necesitás");
+  const alMapa = page.getByRole("link", { name: /Buscar cerca mío/ });
+  await expect(alMapa).toBeVisible();
+  await expect(alMapa).toHaveAttribute("href", "/");
+  await expect(page.getByRole("link", { name: /Quiero aparecer en el mapa/ })).toHaveAttribute("href", "/comercio");
+});
+
+test("la página de inicio muestra los datos de contacto", async ({ page }) => {
+  await page.goto("/inicio");
+  for (const href of ["mailto:hola@localarg.com", "https://wa.me/5493513161452", "https://instagram.com/localarg.ok", "https://facebook.com/localarg.ok"]) {
+    await expect(page.locator(`a[href="${href}"]`)).toHaveCount(1);
+  }
+  await expect(page.getByText("Open Food Facts")).toBeVisible();
+});
+
+test("/landing redirige a /inicio", async ({ page }) => {
+  await page.goto("/landing/");
+  await expect(page).toHaveURL(/\/inicio$/);
+});

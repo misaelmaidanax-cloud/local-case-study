@@ -48,7 +48,7 @@ Taken from the live site with `tools/capture-screenshots.mjs`. Shops are sample 
 | [docs/decisions.md](docs/decisions.md) | Why each choice was made and what was rejected |
 | [docs/ai-assisted-workflow.md](docs/ai-assisted-workflow.md) | How I direct, review and verify AI-written code |
 | [docs/skills-map.md](docs/skills-map.md) | What I did here, mapped to QA, support and operations roles |
-| [tests/](tests/) | 13 Playwright tests against the live site, including regression tests for past bugs |
+| [tests/](tests/) | 16 Playwright tests against the live site, including regression tests for past bugs |
 
 Every document is also available in Spanish in [docs/es](docs/es).
 

@@ -48,7 +48,7 @@ Sacadas del sitio real con `tools/capture-screenshots.mjs`. Los comercios son da
 | [docs/es/decisions.md](docs/es/decisions.md) | Por qué se tomó cada decisión y qué se descartó |
 | [docs/es/ai-assisted-workflow.md](docs/es/ai-assisted-workflow.md) | Cómo dirijo, reviso y verifico el código escrito por IA |
 | [docs/es/skills-map.md](docs/es/skills-map.md) | Lo que hice acá, relacionado con puestos de QA, soporte y operaciones |
-| [tests/](tests/) | 13 pruebas con Playwright sobre el sitio real, incluidas pruebas de regresión de fallas pasadas |
+| [tests/](tests/) | 16 pruebas con Playwright sobre el sitio real, incluidas pruebas de regresión de fallas pasadas |
 
 Todos los documentos también están en inglés en [docs](docs).
 
